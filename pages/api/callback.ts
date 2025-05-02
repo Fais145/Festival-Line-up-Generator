@@ -26,7 +26,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const response = await axios(authOptions);
     const { access_token } = response.data;
     res.redirect(`/poster?token=${access_token}`);
-  } catch (err) {
+    } catch {
     res.status(400).json({ error: 'Invalid token exchange' });
-  }
+    }
+  
 }
