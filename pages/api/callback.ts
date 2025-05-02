@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     },
     data: new URLSearchParams({
       code: code as string,
-      redirect_uri: 'https://localhost:3000/api/callback',
+      redirect_uri: 'https://festival-line-up-generator-6xqp.vercel.app/',
       grant_type: 'authorization_code',
     }),
   };
